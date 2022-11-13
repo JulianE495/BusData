@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{21932A8E-2E80-4EB2-8DE0-F84272731D68}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BusData</RootNamespace>
+    <AssemblyName>BusData</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="conexionDB.cs" />
+    <Compile Include="frAddBus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frAddBus.Designer.cs">
+      <DependentUpon>frAddBus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frAddRoute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frAddRoute.Designer.cs">
+      <DependentUpon>frAddRoute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frAsignarBusRuta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frAsignarBusRuta.Designer.cs">
+      <DependentUpon>frAsignarBusRuta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frEditarRutas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frEditarRutas.Designer.cs">
+      <DependentUpon>frEditarRutas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frEditBus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frEditBus.Designer.cs">
+      <DependentUpon>frEditBus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frEditDriver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frEditDriver.Designer.cs">
+      <DependentUpon>frEditDriver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frEditRoute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frEditRoute.Designer.cs">
+      <DependentUpon>frEditRoute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frMain.Designer.cs">
+      <DependentUpon>frMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frAddDriver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frAddDriver.Designer.cs">
+      <DependentUpon>frAddDriver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frBus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frBus.Designer.cs">
+      <DependentUpon>frBus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frDriver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frDriver.Designer.cs">
+      <DependentUpon>frDriver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frRoute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frRoute.Designer.cs">
+      <DependentUpon>frRoute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frAddBus.resx">
+      <DependentUpon>frAddBus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frAddRoute.resx">
+      <DependentUpon>frAddRoute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frAsignarBusRuta.resx">
+      <DependentUpon>frAsignarBusRuta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frDriver.resx">
+      <DependentUpon>frDriver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frEditarRutas.resx">
+      <DependentUpon>frEditarRutas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frEditBus.resx">
+      <DependentUpon>frEditBus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frEditDriver.resx">
+      <DependentUpon>frEditDriver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frEditRoute.resx">
+      <DependentUpon>frEditRoute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frMain.resx">
+      <DependentUpon>frMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frAddDriver.resx">
+      <DependentUpon>frAddDriver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frBus.resx">
+      <DependentUpon>frBus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frRoute.resx">
+      <DependentUpon>frRoute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\escuela-de-autobuses.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\addDriver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\addRoute.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icons8_bus_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icons8_bus_30px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icons8_home_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icons8_id_not_verified_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icons8_id_verified_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icons8_Plus_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icons8_print_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icons8_registration_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\driver %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icons8_design_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icons8_save_30px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icons8_unfriend_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icons8_edit_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\route.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icons8_save_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icons8_save_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\driverExample.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\busExample.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icons8_road_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icons8_bus_stop_30px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\perfil %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icons8_cancel_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icons8_delete_30px_1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
